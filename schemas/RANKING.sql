@@ -1,0 +1,20 @@
+CREATE TABLE RANKING_1516(
+  player_id INTEGER PRIMARY KEY,
+  first_name VARCHAR(50),
+  last_name VARCHAR(50),
+  games_played FLOAT,
+  min FLOAT,
+  fgm FLOAT,
+  fg_pct FLOAT,
+  fg3m FLOAT,
+  fg3_pct FLOAT,
+  ftm FLOAT,
+  ft_pct FLOAT,
+  reb FLOAT,
+  ast FLOAT,
+  stl FLOAT,
+  blk FLOAT,
+  tov FLOAT,
+  aot FLOAT,
+  pts FLOAT
+);
