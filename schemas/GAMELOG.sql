@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS GAMELOG_1516(
   stl INTEGER,
   blk INTEGER,
   tov INTEGER,
-  aot INTEGER,
+  aot FLOAT,
   foul INTEGER,
   pts INTEGER,
   plus_minus INTEGER
