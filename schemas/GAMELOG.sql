@@ -1,11 +1,9 @@
-CREATE TABLE IF NOT EXISTS GAMELOG_1516(
+CREATE TABLE IF NOT EXISTS GAMELOG_2015(
   id INTEGER PRIMARY KEY AUTO_INCREMENT,
   season_id INTEGER,
   player_id INTEGER,
   game_id INTEGER,
-  game_month VARCHAR(10),
-  game_day INTEGER,
-  game_year YEAR,
+  game_date DATE,
   home_away BOOLEAN,
   team VARCHAR(20),
   opp_team VARCHAR(20),
