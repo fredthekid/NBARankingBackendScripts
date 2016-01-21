@@ -18,3 +18,129 @@ CREATE TABLE RANKING_ALL_2015(
   aot FLOAT,
   pts FLOAT
 );
+
+CREATE TABLE RANKING_3M_2015(
+  player_id INTEGER PRIMARY KEY,
+  first_name VARCHAR(50),
+  last_name VARCHAR(50),
+  games_played FLOAT,
+  min FLOAT,
+  fgm FLOAT,
+  fg_pct FLOAT,
+  fg3m FLOAT,
+  fg3_pct FLOAT,
+  ftm FLOAT,
+  ft_pct FLOAT,
+  reb FLOAT,
+  ast FLOAT,
+  stl FLOAT,
+  blk FLOAT,
+  tov FLOAT,
+  aot FLOAT,
+  pts FLOAT
+);
+
+CREATE TABLE RANKING_2M_2015(
+  player_id INTEGER PRIMARY KEY,
+  first_name VARCHAR(50),
+  last_name VARCHAR(50),
+  games_played FLOAT,
+  min FLOAT,
+  fgm FLOAT,
+  fg_pct FLOAT,
+  fg3m FLOAT,
+  fg3_pct FLOAT,
+  ftm FLOAT,
+  ft_pct FLOAT,
+  reb FLOAT,
+  ast FLOAT,
+  stl FLOAT,
+  blk FLOAT,
+  tov FLOAT,
+  aot FLOAT,
+  pts FLOAT
+);
+
+CREATE TABLE RANKING_1M_2015(
+  player_id INTEGER PRIMARY KEY,
+  first_name VARCHAR(50),
+  last_name VARCHAR(50),
+  games_played FLOAT,
+  min FLOAT,
+  fgm FLOAT,
+  fg_pct FLOAT,
+  fg3m FLOAT,
+  fg3_pct FLOAT,
+  ftm FLOAT,
+  ft_pct FLOAT,
+  reb FLOAT,
+  ast FLOAT,
+  stl FLOAT,
+  blk FLOAT,
+  tov FLOAT,
+  aot FLOAT,
+  pts FLOAT
+);
+
+CREATE TABLE RANKING_3W_2015(
+  player_id INTEGER PRIMARY KEY,
+  first_name VARCHAR(50),
+  last_name VARCHAR(50),
+  games_played FLOAT,
+  min FLOAT,
+  fgm FLOAT,
+  fg_pct FLOAT,
+  fg3m FLOAT,
+  fg3_pct FLOAT,
+  ftm FLOAT,
+  ft_pct FLOAT,
+  reb FLOAT,
+  ast FLOAT,
+  stl FLOAT,
+  blk FLOAT,
+  tov FLOAT,
+  aot FLOAT,
+  pts FLOAT
+);
+
+CREATE TABLE RANKING_2W_2015(
+  player_id INTEGER PRIMARY KEY,
+  first_name VARCHAR(50),
+  last_name VARCHAR(50),
+  games_played FLOAT,
+  min FLOAT,
+  fgm FLOAT,
+  fg_pct FLOAT,
+  fg3m FLOAT,
+  fg3_pct FLOAT,
+  ftm FLOAT,
+  ft_pct FLOAT,
+  reb FLOAT,
+  ast FLOAT,
+  stl FLOAT,
+  blk FLOAT,
+  tov FLOAT,
+  aot FLOAT,
+  pts FLOAT
+);
+
+CREATE TABLE RANKING_1W_2015(
+  player_id INTEGER PRIMARY KEY,
+  first_name VARCHAR(50),
+  last_name VARCHAR(50),
+  games_played FLOAT,
+  min FLOAT,
+  fgm FLOAT,
+  fg_pct FLOAT,
+  fg3m FLOAT,
+  fg3_pct FLOAT,
+  ftm FLOAT,
+  ft_pct FLOAT,
+  reb FLOAT,
+  ast FLOAT,
+  stl FLOAT,
+  blk FLOAT,
+  tov FLOAT,
+  aot FLOAT,
+  pts FLOAT
+);
