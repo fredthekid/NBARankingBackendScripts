@@ -1,3 +1,5 @@
+# config taken from first iteration. need to change before use.
+
 upstream project{
   ip_hash;
   server 192.241.211.19:8000; #digitalocean: nbaanalysis1
