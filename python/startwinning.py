@@ -78,9 +78,30 @@ class StartWinningAPI(object):
                 print ranking
                 rankingUpdate.storeRankingInDB(ranking, k)
 
+    # this function only needs to be run once when the database is initiated.
+    # gets the mapping of id (based on NBA.com) to player names
+    def get_Id_Of_Players(self):
+        nbaAPI = NBAWebScrape()
+        self._storePlayerId(nbaAPI.obtainPlayerIDs())
+
+
+
     #############################################################
     # PRIVATE FUNCTIONS (DONT USE THIS SHIT OUTSIDE THIS CLASS) #
     #############################################################
+
+    # stores player id into mysql database
+    def _storePlayerId(self, player_data, host_name="localhost", user_name="fred", database="startwinning", table="id_player"):
+        db = MySQLdb.connect(host=host_name, user=user_name, db=database)
+        cur = db.cursor()
+        for player in player_data:
+            try:
+                cur.execute("INSERT INTO " + table + " VALUES( %s, %s, %s, %s, %s, %s);", (str(player[0]), player[1], player[2], player[3], str(player[4]), str(player[5])))
+                db.commit()
+            except:
+                print("Error storing in database")
+
+
     # this function parses the JSON data and stores it in MySQL
     def _storeGameLog(self, game_log_result, host_name="localhost", user_name="fred", database="startwinning", table="GAMELOG_2015"):
         db = MySQLdb.connect(host=host_name, user=user_name, db=database)
