@@ -3,7 +3,7 @@ import requests
 class NBAWebScrape(object):
     def obtainPlayerIDs(self):
         player_info_url = 'http://stats.nba.com/stats/commonallplayers?IsOnlyCurrentSeason=1&LeagueID=00&Season=2015-16'
-        player_info = requests.get(player_info_url).json()
+        player_info = requests.get(player_info_url, headers={'User-Agent': 'firefox'}).json()
         all_players = []
         for player in player_info['resultSets'][0]['rowSet']:
             info = []
@@ -54,9 +54,11 @@ class NBAWebScrape(object):
     def getGameLogsOfPlayer(self, playerID, season='2015-16'):
         game_log_url = 'http://stats.nba.com/stats/playergamelog?' \
                  'LeagueID=00&' \
+                 'PerMode=PerGame&' \
                  'PlayerID=' + str(playerID) + '&' \
                  'Season=' + season + '&' \
                  'SeasonType=Regular+Season'
-        game_log_json = requests.get(game_log_url).json()
+        print game_log_url
+        game_log_json = requests.get(game_log_url, headers={'User-Agent': 'firefox'}).json()
         game_log_result = game_log_json['resultSets'][0]['rowSet']
         return game_log_result
