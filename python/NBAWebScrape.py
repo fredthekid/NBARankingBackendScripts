@@ -58,7 +58,6 @@ class NBAWebScrape(object):
                  'PlayerID=' + str(playerID) + '&' \
                  'Season=' + season + '&' \
                  'SeasonType=Regular+Season'
-        print game_log_url
         game_log_json = requests.get(game_log_url, headers={'User-Agent': 'firefox'}).json()
         game_log_result = game_log_json['resultSets'][0]['rowSet']
         return game_log_result
